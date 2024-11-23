@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Azama Matulezi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFC300;
+            color: #1B1833;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #441752;
+            color: #F29F58;
+            padding: 20px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .animated-title {
+            font-size: 2.5em;
+            margin: 0;
+            animation: slide 2s infinite alternate;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(10px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            padding: 5px 10px;
+            background-color: #ffffff;
+            color: #0B132B; /* Navy Gelap */
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 120px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 15px;
+            background-color: #F29F58;
+        }
+
+        nav a {
+            color: #1B1833;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #441752;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus {
+            transform: scale(1.1);
+            color: #ffffff;
+            box-shadow: 0 0 10px #ffffff;
+        }
+
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+            background-color: rgba(27, 24, 51, 0.9);
+            color: #F29F58;
+            border-radius: 8px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #F29F58, 0 0 20px #F29F58;
+        }
+
+        .bagan {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #1B1833;
+            padding: 20px;
+            margin: 10px auto;
+            border-radius: 8px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 20px #F29F58, 0 0 30px #F29F58;
+        }
+
+        .separator {
+            margin: 20px auto;
+            height: 4px;
+            width: 80%;
+            background-color: red;
+            border-radius: 5px;
+            box-shadow: 0 0 10px red, 0 0 20px red;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-in-out;
+        }
+
+        .separator.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact {
+            background-color: #1B1833;
+            color: #FFC300;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #441752;
+            color: #F29F58;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .logo {
+                margin: 10px 0;
+            }
+
+            .animated-title {
+                font-size: 2em;
+            }
+
+            .image-container img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="animated-title">Azama Matulezi</h1>
+        <div class="subtitle">CEO of Brunei</div>
+        <img class="logo" src="https://www.ipsgroupbv.com/wp-content/uploads/2019/06/Brunei_Shell.jpg" alt="Brunei Shell Logo">
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="image-container">
+            <img src="https://private-user-images.githubusercontent.com/112866716/389189539-5c5bb804-897e-49cc-81a2-e55cfcc8a161.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIzNTY0OTYsIm5iZiI6MTczMjM1NjE5NiwicGF0aCI6Ii8xMTI4NjY3MTYvMzg5MTg5NTM5LTVjNWJiODA0LTg5N2UtNDljYy04MWEyLWU1NWNmY2M4YTE2MS5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyM1QxMDAzMTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wMTQyYjIzYjE4NjM5MjQ1NmJmNzNhMTA3ZWJhYTIwNWE2ODAzODM5N2FhZTI0NzY3MGI2OTEwZjc1Y2ZhNThkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.gegvcxIysCR8gzmR7gU0smzY_AOhHcjpByRQnpSzrs8" alt="Main Photo">
+            <img src="https://private-user-images.githubusercontent.com/112866716/389191295-e714dad9-b2e6-4f52-a4bc-71cdb8a3fa07.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIzNTg2OTAsIm5iZiI6MTczMjM1ODM5MCwicGF0aCI6Ii8xMTI4NjY3MTYvMzg5MTkxMjk1LWU3MTRkYWQ5LWIyZTYtNGY1Mi1hNGJjLTcxY2RiOGEzZmEwNy5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI0MTEyMyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNDExMjNUMTAzOTUwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NWFhNTFlMWRmNmUwMTIxOGY0OTA4ZGQzNjRhYWZlY2U5NmI3NTczOWQwOGI3NTJkYWFhZGRhZjllNjU4ODM4MiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.uY1O9_nGv29Qod_r7_Apvu-Yx5ixxUEnaBv1wCNzNv0" alt="Left Photo">
+            <img src="https://private-user-images.githubusercontent.com/112866716/389189433-d55865e3-9cfe-4067-83ff-aae1cc408466.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIzNTY0MDAsIm5iZiI6MTczMjM1NjEwMCwicGF0aCI6Ii8xMTI4NjY3MTYvMzg5MTg5NDMzLWQ1NTg2NWUzLTljZmUtNDA2Ny04M2ZmLWFhZTFjYzQwODQ2Ni5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyM1QxMDAxNDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZjBjZDQ1OTI4ZWI5ZDU3MGE4YjcwZWNhN2JhNGQ2M2M0MmVjNDk4ZDgxMTUxZDZkNjZhYmM0NmNjNTk5NjAwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.3SFmKJOe143_gn-6ydXwygMLUfrlHXtFOoQfraxJ6Aw" alt="Right Photo">
+        </div>
+        <p>I am an experienced entrepreneur with a strong background in the energy industry. With over 15 years of experience in this sector, I am committed to leading innovation and sustainability at Brunei Shell.</p>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="bagan">CEO, Brunei Shell (2020 - Present)</div>
+        <div class="bagan">Operations Manager, Brunei Shell (2015 - 2020)</div>
+        <div class="bagan">Technical Staff, Brunei Shell (2010 - 2015)</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="bagan">MBA, Universiti Brunei Darussalam (2009)</div>
+        <div class="bagan">B.Eng., Universiti Teknologi Brunei (2007)</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="bagan">Project Management</div>
+        <div class="bagan">Business Strategy</div>
+        <div class="bagan">Innovation</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="projects">
+        <h2>Recent Projects</h2>
+        <p>Some of my recent projects include:</p>
+        <div class="bagan">Renewable Energy Initiative</div>
+        <div class="bagan">Energy Efficiency Program</div>
+        <div class="bagan">Technology Development Project</div>
+    </section>
+
+    <div class="separator"></div>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:azama.matulezi@example.com" style="color: #FFC300;">azama.matulezi@example.com</a></p>
+        <p>Phone: +673 123 4567</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/azama-matulezi" style="color: #FFC300;">linkedin.com/in/azama-matulezi</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Azama Matulezi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section, .separator');
+        const options = { threshold: 0.1 };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
